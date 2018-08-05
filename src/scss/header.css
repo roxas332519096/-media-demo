@@ -1,0 +1,116 @@
+@function px ($px){
+    @return $px/$designWidth*100 + rem; //1200/1920*100 * 16 * 1.2
+}
+
+$designWidth : 1920;
+
+@media (min-width:1440px){
+    html{
+        font-size: 19.2px;
+    }
+    
+}
+
+@media (min-width:1200px) and (max-width:1439px){
+    html{
+        font-size: 16px;
+    }
+    
+}
+
+@media (min-width:1000px) and (max-width:1199px){
+    html {
+        font-size: 13.33px;
+    }
+}
+
+@media (max-width:999px){
+    html {
+        font-size: 11.11px;
+    }
+}
+
+* {
+    transition: 0.3s;
+}
+
+header {
+    width: 100%;
+    .container {
+        width: px(1440);
+        margin: 0 auto;
+        background: #000;
+        color: #fff;
+        & > div {
+            padding: 0 10px;
+
+            .logo  {
+                border-bottom: 1px solid #fff;
+            
+                div{
+                    float: left;
+                    padding-top:px(40);
+                    padding-bottom:px(40);
+                }
+            
+                ul {
+                    float: right;
+                    
+                    li {
+                        float: left;
+                        margin-left: px(10);
+                        margin-top: px(50);
+                        width: px(34);height: px(34);
+                        text-align: center;
+                        line-height: px(34);
+                        background: rgba(255, 255, 255, 0.8);
+                        border-radius: 50%;
+                        cursor: pointer;
+                        transition: 0.3s;
+            
+                        &:hover{
+                            background: #fff;
+                        }
+                    }
+                }
+            
+            }
+            
+            nav {
+                margin-top: px(20);
+            
+                menu {
+                    float: left;
+                    margin-top:px(6);
+            
+                    ul li{
+                        float: left;
+                        padding-right: px(44);
+                        font-size: px(18);
+                        line-height: px(14);
+                    }
+                }
+            
+                span {
+                    float: right;
+                    cursor: pointer;
+            
+                    svg {
+                        fill:#fff;
+                        transition: 0.3s;
+                        opacity:0.749;
+            
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+
+
